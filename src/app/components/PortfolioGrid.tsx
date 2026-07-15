@@ -35,6 +35,7 @@ const projects: Project[] = [
   { id: 6,  name: 'Bonds',                       label: 'COMMUNITY BRANDING',     year: '2022', category: 'Microsoft',           to: '/bonds', thumbnail: '/thumbnails/bonds.avif', thumbnailFit: 'contain', thumbnailBg: '#0E0E10', thumbnailScale: 0.6 },
   { id: 16, name: 'Curing Diabetes',             label: 'COMING SOON',            year: '2026', category: 'Betalin',             url: 'https://www.youtube.com/embed/Ww7nfJx9I2A?si=-V9UF6DkbvCPAODu&controls=0', thumbnail: '/thumbnails/betalin.png' },
   { id: 10, name: 'Adama',                       label: 'EXPLAINER FILM',         year: '2022', category: 'Adama',               url: 'https://player.vimeo.com/video/435425162?h=604955d3f4', thumbnail: '/thumbnails/adama.png' },
+  { id: 17, name: 'Microsoft GS²',               label: 'BRAND & STRATEGY',       year: '2025', category: 'Microsoft',           url: 'https://embed.figma.com/slides/qPel0l74YSnJZqu0lhX5KS/GS-For-Portfolio?node-id=6-116&embed-host=share', isFigma: true, thumbnail: '/thumbnails/microsoft-gs2.png' },
 ];
 
 export default function PortfolioGrid() {
