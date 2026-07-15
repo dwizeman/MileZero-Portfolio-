@@ -62,8 +62,9 @@ export default function ProjectDetail() {
     );
   }
 
-  const viewerHiddenIds = [2, 10, 16, 17];
-  if (viewerHiddenIds.includes(project.id) && userRole === 'viewer') {
+  const viewerHiddenIds = [2, 10, 16];
+  const fullyHiddenIds = [17]; // hidden from everyone (admin included); code/assets stay in the repo
+  if (fullyHiddenIds.includes(project.id) || (viewerHiddenIds.includes(project.id) && userRole === 'viewer')) {
     navigate('/');
     return null;
   }
