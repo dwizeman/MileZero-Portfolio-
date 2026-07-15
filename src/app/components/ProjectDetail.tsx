@@ -32,7 +32,7 @@ const projects: Project[] = [
   { id: 14, url: 'https://www.wizemandaum.com/bluehat', cropTop: 96, cropBottom: 120, cropTopMobile: 0, cropBottomMobile: 180 },
   { id: 15, url: 'https://embed.figma.com/deck/KVZ3YhctHLKgmVCYOyGGWI?embed-host=share', cropTop: 0, cropBottom: 0 },
   { id: 16, url: 'https://www.youtube.com/embed/Ww7nfJx9I2A?si=-V9UF6DkbvCPAODu&controls=0', cropTop: 0, cropBottom: 0 },
-  { id: 17, url: 'https://embed.figma.com/slides/qPel0l74YSnJZqu0lhX5KS/GS-For-Portfolio?node-id=6-116&embed-host=share', cropTop: 0, cropBottom: 0 },
+  { id: 17, url: 'https://embed.figma.com/deck/qPel0l74YSnJZqu0lhX5KS?node-id=6-116&embed-host=share', cropTop: 0, cropBottom: 0 },
 ];
 
 export default function ProjectDetail() {

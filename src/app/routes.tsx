@@ -7,6 +7,7 @@ import DeepInstinctCase from "./components/DeepInstinctCase";
 import OutOfScopeCase from "./components/OutOfScopeCase";
 import BluehatCase from "./components/BluehatCase";
 import AbraKadablueCase from "./components/AbraKadablueCase";
+import GlobalSecurityStartupsCase from "./components/GlobalSecurityStartupsCase";
 import PasswordProtection from "./components/PasswordProtection";
 
 export const router = createBrowserRouter([
@@ -22,6 +23,7 @@ export const router = createBrowserRouter([
       { path: "out-of-scope", Component: OutOfScopeCase },
       { path: "bluehat", Component: BluehatCase },
       { path: "abra-kadablue", Component: AbraKadablueCase },
+      { path: "global-security-startups", Component: GlobalSecurityStartupsCase },
     ],
   },
 ]);
