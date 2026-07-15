@@ -61,7 +61,8 @@ export default function ProjectDetail() {
     );
   }
 
-  if (project.id === 2 && userRole === 'viewer') {
+  const viewerHiddenIds = [2, 10, 16];
+  if (viewerHiddenIds.includes(project.id) && userRole === 'viewer') {
     navigate('/');
     return null;
   }

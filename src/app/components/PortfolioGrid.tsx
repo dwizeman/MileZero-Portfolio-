@@ -40,7 +40,8 @@ const projects: Project[] = [
 export default function PortfolioGrid() {
   const { userRole } = useOutletContext<OutletContext>();
 
-  const visibleProjects = projects.filter(p => userRole === 'admin' || p.id !== 2);
+  const viewerHiddenIds = [2, 10, 16];
+  const visibleProjects = projects.filter(p => userRole === 'admin' || !viewerHiddenIds.includes(p.id));
 
   const totalLabel = visibleProjects.length.toString().padStart(2, '0');
 
