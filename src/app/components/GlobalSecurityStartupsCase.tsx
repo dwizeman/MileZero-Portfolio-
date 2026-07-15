@@ -92,7 +92,7 @@ export default function GlobalSecurityStartupsCase() {
                 letterSpacing: '-0.02em',
               }}
             >
-              A brand and program strategy for a global cybersecurity AI accelerator.
+              A visual system built for growth.
             </h2>
             <p
               className="text-[#050505]/58"
@@ -102,9 +102,11 @@ export default function GlobalSecurityStartupsCase() {
                 maxWidth: '420px',
               }}
             >
-              Built for Microsoft to connect cybersecurity AI startups with
-              enterprise partners — from onboarding and product deep-dives
-              through go-to-market readiness and scaled partnership.
+              Built around a modular launch path that transforms strategic
+              progress into a visual language. Each connected step represents
+              a new stage of maturity, reflecting the program's mission to
+              guide AI startups from technical readiness to enterprise-scale
+              partnerships through structure, momentum, and collaboration.
             </p>
           </div>
         </header>
