@@ -5,8 +5,8 @@ import logoSvg from '../../imports/Asset_1.svg';
 
 const images = [
   { src: '/global-security-startups/1.jpg', alt: 'Global Security Startups — program overview' },
-  { src: '/global-security-startups/2.png', alt: 'Global Security Startups — brand & style guide' },
   { src: '/global-security-startups/3.jpg', alt: 'Global Security Startups — how the program works' },
+  { src: '/global-security-startups/2.png', alt: 'Global Security Startups — brand & style guide' },
 ];
 
 const imgClass =
@@ -119,14 +119,14 @@ export default function GlobalSecurityStartupsCase() {
           <img src={images[0].src} alt={images[0].alt} className={imgClass} loading="eager" />
         </figure>
 
-        {/* 2. Brand & style guide */}
+        {/* 2. How the program works */}
         <div className="pt-12 md:pt-20">
           <figure>
             <img src={images[1].src} alt={images[1].alt} className={imgClass} loading="lazy" />
           </figure>
         </div>
 
-        {/* 3. How the program works */}
+        {/* 3. Brand & style guide */}
         <div className="pt-12 md:pt-20">
           <figure>
             <img src={images[2].src} alt={images[2].alt} className={imgClass} loading="lazy" />
