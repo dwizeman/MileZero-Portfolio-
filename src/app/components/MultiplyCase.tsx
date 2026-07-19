@@ -118,18 +118,9 @@ export default function MultiplyCase() {
         {/* Section line */}
         <div className="h-px bg-[#050505]/14 mb-14 md:mb-20" />
 
-        {/* 1. Product dashboard UI — icon-morph video */}
+        {/* 1. Product dashboard UI */}
         <figure>
-          <video
-            src="/multiply/4.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            aria-label={images[0].alt}
-            className={imgClass}
-          />
+          <img src={images[0].src} alt={images[0].alt} className={imgClass} loading="eager" />
         </figure>
 
         {/* 2. Mobile app in hand */}
@@ -146,10 +137,19 @@ export default function MultiplyCase() {
           </figure>
         </div>
 
-        {/* 4. Outdoor billboard campaign */}
+        {/* 4. Outdoor billboard campaign — icon-morph video */}
         <div className="pt-12 md:pt-20">
           <figure>
-            <img src={images[3].src} alt={images[3].alt} className={imgClass} loading="lazy" />
+            <video
+              src="/multiply/4.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              aria-label={images[3].alt}
+              className={imgClass}
+            />
           </figure>
         </div>
 
