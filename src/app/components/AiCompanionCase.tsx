@@ -30,11 +30,23 @@ const imgClass =
 
 // Real "iPhone 15 Pro — White Flatten" mockup asset exported directly from
 // the Figma file (PF, node 49:1156 and siblings 49:1169/1166/1157/1160).
-// The frame PNG has a transparent cutout for the screen (with the camera
-// notch left opaque), so the video is placed underneath at the exact
-// screen rect Figma's dev-mode CSS specifies, and the frame image on top
-// masks it into place automatically — pixel-identical to the design.
+// The frame PNG (720x1478) has a transparent cutout for the screen (with
+// the camera notch left opaque). The rect below was measured directly off
+// that PNG's own alpha channel via connected-component analysis (isolating
+// the screen hole from the outer transparent background), not estimated
+// from Figma's dev-mode CSS — so it matches this exact asset pixel-for-
+// pixel. The video sits in its own overflow-hidden box pinned to that rect
+// (no CSS aspect-ratio on the <video> itself, which some browsers size off
+// the file's native resolution instead of the intended box, causing the
+// video to bleed past the screen edges) and the frame image sits on top,
+// masking it into place.
 const phoneFrameSrc = '/ai-companion/phone-frame.png';
+const screenRect = {
+  top: (28 / 1478) * 100,
+  left: (32 / 720) * 100,
+  width: ((686 - 32 + 1) / 720) * 100,
+  height: ((1449 - 28 + 1) / 1478) * 100,
+};
 
 function PhoneMockup({ src, label }: { src: string; label: string }) {
   return (
@@ -43,23 +55,26 @@ function PhoneMockup({ src, label }: { src: string; label: string }) {
         className="relative w-full"
         style={{ aspectRatio: '255.0667 / 523.5372' }}
       >
-        <video
-          src={src}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          className="absolute object-cover"
-          aria-label={label}
+        <div
+          className="absolute overflow-hidden"
           style={{
-            left: '4.4%',
-            right: '4.48%',
-            top: 'calc(50% + 0.2px)',
-            transform: 'translateY(-50%)',
-            aspectRatio: '232.39852905273438 / 503.8258361816406',
+            top: `${screenRect.top}%`,
+            left: `${screenRect.left}%`,
+            width: `${screenRect.width}%`,
+            height: `${screenRect.height}%`,
           }}
-        />
+        >
+          <video
+            src={src}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            className="absolute inset-0 w-full h-full object-cover"
+            aria-label={label}
+          />
+        </div>
         <img
           src={phoneFrameSrc}
           alt=""
