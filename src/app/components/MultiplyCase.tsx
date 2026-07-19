@@ -141,14 +141,22 @@ export default function MultiplyCase() {
           </figure>
         </div>
 
-        {/* 5, 6, 7. Billboard closeups — three-up editorial grid */}
-        <div className="pt-12 md:pt-20 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        {/* 5. Billboard, green */}
+        <div className="pt-12 md:pt-20">
           <figure>
             <img src={images[4].src} alt={images[4].alt} className={imgClass} loading="lazy" />
           </figure>
+        </div>
+
+        {/* 6. Billboard, purple */}
+        <div className="pt-12 md:pt-20">
           <figure>
             <img src={images[5].src} alt={images[5].alt} className={imgClass} loading="lazy" />
           </figure>
+        </div>
+
+        {/* 7. Billboard, orange */}
+        <div className="pt-12 md:pt-20">
           <figure>
             <img src={images[6].src} alt={images[6].alt} className={imgClass} loading="lazy" />
           </figure>
