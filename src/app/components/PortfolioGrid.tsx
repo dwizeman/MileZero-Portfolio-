@@ -46,7 +46,7 @@ export default function PortfolioGrid() {
   const { userRole } = useOutletContext<OutletContext>();
 
   const viewerHiddenIds = [2, 10, 16];
-  const fullyHiddenIds = [17]; // hidden from everyone (admin included); code/assets stay in the repo
+  const fullyHiddenIds = [17, 1, 2]; // hidden from everyone (admin included); code/assets stay in the repo
   const visibleProjects = projects.filter(
     p => !fullyHiddenIds.includes(p.id) && (userRole === 'admin' || !viewerHiddenIds.includes(p.id))
   );
