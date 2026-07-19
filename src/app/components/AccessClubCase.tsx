@@ -103,7 +103,7 @@ export default function AccessClubCase() {
         {/* Section line */}
         <div className="h-px bg-[#050505]/14 mb-14 md:mb-20" />
 
-        {/* Brand animation */}
+        {/* 1. Brand animation */}
         <figure>
           <video
             src="/access-club/access-club-animation.mp4"
@@ -116,6 +116,18 @@ export default function AccessClubCase() {
             className={videoClass}
           />
         </figure>
+
+        {/* 2. Countdown screen, in-venue */}
+        <div className="pt-12 md:pt-20">
+          <figure>
+            <img
+              src="/access-club/2.jpg"
+              alt="Access Club — countdown screen projected in venue"
+              className={videoClass}
+              loading="lazy"
+            />
+          </figure>
+        </div>
 
         {/* Footer */}
         <div className="mt-20 md:mt-32 flex justify-between items-baseline">
