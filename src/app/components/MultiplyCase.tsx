@@ -11,6 +11,9 @@ const images = [
   { src: '/multiply/8.png',  alt: 'Multiply — billboard, green' },
   { src: '/multiply/9.png',  alt: 'Multiply — billboard, purple' },
   { src: '/multiply/10.png', alt: 'Multiply — billboard, orange' },
+  { src: '/multiply/11.png', alt: 'Multiply — branded tote bag' },
+  { src: '/multiply/12.png', alt: 'Multiply — branded notebook' },
+  { src: '/multiply/13.png', alt: 'Multiply — branded t-shirt' },
 ];
 
 const imgClass =
@@ -159,6 +162,27 @@ export default function MultiplyCase() {
         <div className="pt-12 md:pt-20">
           <figure>
             <img src={images[6].src} alt={images[6].alt} className={imgClass} loading="lazy" />
+          </figure>
+        </div>
+
+        {/* 8. Branded tote bag */}
+        <div className="pt-12 md:pt-20">
+          <figure>
+            <img src={images[7].src} alt={images[7].alt} className={imgClass} loading="lazy" />
+          </figure>
+        </div>
+
+        {/* 9. Branded notebook */}
+        <div className="pt-12 md:pt-20">
+          <figure>
+            <img src={images[8].src} alt={images[8].alt} className={imgClass} loading="lazy" />
+          </figure>
+        </div>
+
+        {/* 10. Branded t-shirt */}
+        <div className="pt-12 md:pt-20">
+          <figure>
+            <img src={images[9].src} alt={images[9].alt} className={imgClass} loading="lazy" />
           </figure>
         </div>
 
