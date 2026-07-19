@@ -129,6 +129,18 @@ export default function AccessClubCase() {
           </figure>
         </div>
 
+        {/* 3. Standing display sign */}
+        <div className="pt-12 md:pt-20">
+          <figure>
+            <img
+              src="/access-club/3.jpg"
+              alt="Access Club — standing display sign"
+              className={videoClass}
+              loading="lazy"
+            />
+          </figure>
+        </div>
+
         {/* Footer */}
         <div className="mt-20 md:mt-32 flex justify-between items-baseline">
           <span className="text-[10px] tracking-[0.24em] uppercase text-[#050505]/45">
