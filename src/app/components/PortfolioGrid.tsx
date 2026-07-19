@@ -23,7 +23,7 @@ interface Project {
 
 const projects: Project[] = [
   { id: 1,  name: 'Multiply',                    label: 'BRAND SYSTEM',           year: '2024', category: 'Scala Group',         url: 'https://embed.figma.com/deck/Z2V3oQOFrBtscMYtF0y8Yi?embed-host=share', isFigma: true, thumbnail: '/thumbnails/multiply.jpg' },
-  { id: 19, name: 'Multiply',                    label: 'BRAND SYSTEM',           year: '2024', category: 'Scala Group',         to: '/multiply', thumbnail: '/multiply/4.png' },
+  { id: 19, name: 'Multiply',                    label: 'BRAND SYSTEM',           year: '2024', category: 'Scala Group',         to: '/multiply', thumbnail: '/multiply/thumbnail.mp4' },
   { id: 2,  name: 'Your AI Companion',           label: 'PRODUCT UX / UI',        year: '2024', category: 'Museum of Tolerance', url: 'https://embed.figma.com/deck/Rnhyu8rGPbUjOICdErIwNZ?embed-host=share', isFigma: true, thumbnail: '/thumbnails/ai-companion.jpg' },
   { id: 20, name: 'Your AI Companion',           label: 'PRODUCT UX / UI',        year: '2024', category: 'Museum of Tolerance', to: '/ai-companion', thumbnail: '/ai-companion/1.png' },
   { id: 18, name: 'Global Security Startups',    label: 'BRAND & STRATEGY',       year: '2025', category: 'Microsoft',           to: '/global-security-startups', thumbnail: '/thumbnails/global-security-startups.jpg' },
