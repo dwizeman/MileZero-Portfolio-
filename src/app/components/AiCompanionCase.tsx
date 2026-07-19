@@ -28,14 +28,25 @@ const tutorials = [
 const imgClass =
   'w-auto h-auto max-w-full max-h-[85vh] mx-auto rounded-[14px] md:rounded-[18px] object-contain block';
 
+// Frame proportions measured pixel-for-pixel from the source Figma slide
+// (slide 8 / Tutorials), phone 1's mockup at native 1920x1080 resolution:
+// outer frame 252x524px, bezel 9px, notch 72x20px inset 18px from the top.
 function PhoneMockup({ src, label }: { src: string; label: string }) {
   return (
     <div className="w-full max-w-[220px] sm:max-w-[240px] mx-auto">
       <div
-        className="relative w-full rounded-[2.2rem] md:rounded-[2.6rem] bg-black shadow-[0_20px_50px_-15px_rgba(0,0,0,0.5)]"
-        style={{ aspectRatio: '9 / 19.5', padding: 'clamp(8px, 1.4vw, 12px)' }}
+        className="relative w-full bg-black shadow-[0_20px_50px_-15px_rgba(0,0,0,0.55)]"
+        style={{
+          aspectRatio: '252 / 524',
+          borderRadius: '15.1%',
+          padding: '3.6%',
+          border: '1px solid rgba(215, 215, 210, 0.55)',
+        }}
       >
-        <div className="relative w-full h-full rounded-[1.7rem] md:rounded-[2rem] overflow-hidden bg-black">
+        <div
+          className="relative w-full h-full overflow-hidden bg-black"
+          style={{ borderRadius: '12.6%' }}
+        >
           <video
             src={src}
             autoPlay
@@ -47,11 +58,15 @@ function PhoneMockup({ src, label }: { src: string; label: string }) {
             aria-label={label}
           />
         </div>
-        {/* Dynamic-island notch */}
+        {/* Camera notch — measured 72x20px, 18px below the outer top edge, centered */}
         <div
           aria-hidden
           className="absolute left-1/2 -translate-x-1/2 bg-black rounded-full"
-          style={{ top: 'clamp(14px, 2.2vw, 20px)', width: '32%', height: '3.2%' }}
+          style={{
+            top: '3.44%',
+            width: '28.6%',
+            aspectRatio: '72 / 20',
+          }}
         />
       </div>
     </div>
@@ -181,7 +196,7 @@ export default function AiCompanionCase() {
             className="rounded-[14px] md:rounded-[18px] px-6 sm:px-10 md:px-14 pt-12 md:pt-16 pb-10 md:pb-12"
             style={{ background: 'linear-gradient(180deg, #000000 0%, #0D21AA 100%)' }}
           >
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-6 mb-10 md:mb-14">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-10 md:gap-x-10 mb-10 md:mb-14">
               {tutorials.map(tutorial => (
                 <PhoneMockup key={tutorial.src} src={tutorial.src} label={tutorial.label} />
               ))}
