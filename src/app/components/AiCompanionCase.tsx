@@ -28,45 +28,44 @@ const tutorials = [
 const imgClass =
   'w-auto h-auto max-w-full max-h-[85vh] mx-auto rounded-[14px] md:rounded-[18px] object-contain block';
 
-// Frame proportions measured pixel-for-pixel from the source Figma slide
-// (slide 8 / Tutorials), phone 1's mockup at native 1920x1080 resolution:
-// outer frame 252x524px, bezel 9px, notch 72x20px inset 18px from the top.
+// Real "iPhone 15 Pro — White Flatten" mockup asset exported directly from
+// the Figma file (PF, node 49:1156 and siblings 49:1169/1166/1157/1160).
+// The frame PNG has a transparent cutout for the screen (with the camera
+// notch left opaque), so the video is placed underneath at the exact
+// screen rect Figma's dev-mode CSS specifies, and the frame image on top
+// masks it into place automatically — pixel-identical to the design.
+const phoneFrameSrc = '/ai-companion/phone-frame.png';
+
 function PhoneMockup({ src, label }: { src: string; label: string }) {
   return (
     <div className="w-full max-w-[220px] sm:max-w-[240px] mx-auto">
       <div
-        className="relative w-full bg-black shadow-[0_20px_50px_-15px_rgba(0,0,0,0.55)]"
-        style={{
-          aspectRatio: '252 / 524',
-          borderRadius: '15.1%',
-          padding: '3.6%',
-          border: '1px solid rgba(215, 215, 210, 0.55)',
-        }}
+        className="relative w-full"
+        style={{ aspectRatio: '255.0667 / 523.5372' }}
       >
-        <div
-          className="relative w-full h-full overflow-hidden bg-black"
-          style={{ borderRadius: '12.6%' }}
-        >
-          <video
-            src={src}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="w-full h-full object-cover"
-            aria-label={label}
-          />
-        </div>
-        {/* Camera notch — measured 72x20px, 18px below the outer top edge, centered */}
-        <div
-          aria-hidden
-          className="absolute left-1/2 -translate-x-1/2 bg-black rounded-full"
+        <video
+          src={src}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="absolute object-cover"
+          aria-label={label}
           style={{
-            top: '3.44%',
-            width: '28.6%',
-            aspectRatio: '72 / 20',
+            left: '4.4%',
+            right: '4.48%',
+            top: 'calc(50% + 0.2px)',
+            transform: 'translateY(-50%)',
+            aspectRatio: '232.39852905273438 / 503.8258361816406',
           }}
+        />
+        <img
+          src={phoneFrameSrc}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 w-full h-full pointer-events-none select-none"
+          draggable={false}
         />
       </div>
     </div>
