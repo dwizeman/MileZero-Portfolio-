@@ -24,6 +24,7 @@ interface Project {
 const projects: Project[] = [
   { id: 1,  name: 'Multiply',                    label: 'BRAND SYSTEM',           year: '2024', category: 'Scala Group',         url: 'https://embed.figma.com/deck/Z2V3oQOFrBtscMYtF0y8Yi?embed-host=share', isFigma: true, thumbnail: '/thumbnails/multiply.jpg' },
   { id: 2,  name: 'Your AI Companion',           label: 'PRODUCT UX / UI',        year: '2024', category: 'Museum of Tolerance', url: 'https://embed.figma.com/deck/Rnhyu8rGPbUjOICdErIwNZ?embed-host=share', isFigma: true, thumbnail: '/thumbnails/ai-companion.jpg' },
+  { id: 18, name: 'Global Security Startups',    label: 'BRAND & STRATEGY',       year: '2025', category: 'Microsoft',           to: '/global-security-startups', thumbnail: '/thumbnails/global-security-startups.jpg' },
   { id: 15, name: 'Neo',                         label: 'PRODUCT UX/UI',          year: '2025', category: 'Be the Bank',         url: 'https://embed.figma.com/deck/KVZ3YhctHLKgmVCYOyGGWI?embed-host=share', thumbnail: '/thumbnails/neo.png' },
   { id: 12, name: 'Ugly is the New Cool',        label: 'SWAG',                   year: '2026', category: 'Microsoft',           thumbnail: '/thumbnails/microsoft-collection.png', to: '/microsoft-collection' },
   { id: 13, name: 'A Story of a Product',        label: 'PRODUCT DESIGN',         year: '2026', category: 'Sages',               url: 'https://embed.figma.com/deck/5dfuwWFwn9dzbPYO8ebg9O?embed-host=share', thumbnail: '/thumbnails/sages.jpg' },
@@ -36,7 +37,6 @@ const projects: Project[] = [
   { id: 16, name: 'Curing Diabetes',             label: 'COMING SOON',            year: '2026', category: 'Betalin',             url: 'https://www.youtube.com/embed/Ww7nfJx9I2A?si=-V9UF6DkbvCPAODu&controls=0', thumbnail: '/thumbnails/betalin.png' },
   { id: 10, name: 'Adama',                       label: 'EXPLAINER FILM',         year: '2022', category: 'Adama',               url: 'https://player.vimeo.com/video/435425162?h=604955d3f4', thumbnail: '/thumbnails/adama.png' },
   { id: 17, name: 'Microsoft GS²',               label: 'BRAND & STRATEGY',       year: '2025', category: 'Microsoft',           url: 'https://embed.figma.com/deck/qPel0l74YSnJZqu0lhX5KS?node-id=6-116&embed-host=share', isFigma: true, thumbnail: '/thumbnails/microsoft-gs2.png' },
-  { id: 18, name: 'Global Security Startups',    label: 'BRAND & STRATEGY',       year: '2025', category: 'Microsoft',           to: '/global-security-startups', thumbnail: '/thumbnails/global-security-startups.jpg' },
 ];
 
 export default function PortfolioGrid() {
