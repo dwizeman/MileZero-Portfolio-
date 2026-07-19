@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import { ArrowLeft } from 'lucide-react';
 import logoSvg from '../../imports/Asset_1.svg';
 
-const images = [
+const imagesBeforeTutorials = [
   { src: '/ai-companion/1.png', alt: 'AI Companion — App Design, MOTJ title slide' },
   { src: '/ai-companion/2.png', alt: 'AI Companion — Concept' },
   { src: '/ai-companion/3.png', alt: 'AI Companion — Gates' },
@@ -11,12 +11,52 @@ const images = [
   { src: '/ai-companion/5.png', alt: 'AI Companion — Gate of Knowledge' },
   { src: '/ai-companion/6.png', alt: 'AI Companion — Gate of Mutuality' },
   { src: '/ai-companion/7.png', alt: 'AI Companion — Gate of Faith' },
-  { src: '/ai-companion/8.png', alt: 'AI Companion — Tutorials' },
+];
+
+const imagesAfterTutorials = [
   { src: '/ai-companion/9.png', alt: 'AI Companion — UI collage' },
+];
+
+const tutorials = [
+  { src: '/ai-companion/tutorial-map.mp4', label: 'Map' },
+  { src: '/ai-companion/tutorial-ai-chat.mp4', label: 'AI Chat' },
+  { src: '/ai-companion/tutorial-diary.mp4', label: 'Diary' },
+  { src: '/ai-companion/tutorial-immersive.mp4', label: 'Immersive' },
+  { src: '/ai-companion/tutorial-intro.mp4', label: 'Intro' },
 ];
 
 const imgClass =
   'w-auto h-auto max-w-full max-h-[85vh] mx-auto rounded-[14px] md:rounded-[18px] object-contain block';
+
+function PhoneMockup({ src, label }: { src: string; label: string }) {
+  return (
+    <div className="w-full max-w-[220px] sm:max-w-[240px] mx-auto">
+      <div
+        className="relative w-full rounded-[2.2rem] md:rounded-[2.6rem] bg-black shadow-[0_20px_50px_-15px_rgba(0,0,0,0.5)]"
+        style={{ aspectRatio: '9 / 19.5', padding: 'clamp(8px, 1.4vw, 12px)' }}
+      >
+        <div className="relative w-full h-full rounded-[1.7rem] md:rounded-[2rem] overflow-hidden bg-black">
+          <video
+            src={src}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            className="w-full h-full object-cover"
+            aria-label={label}
+          />
+        </div>
+        {/* Dynamic-island notch */}
+        <div
+          aria-hidden
+          className="absolute left-1/2 -translate-x-1/2 bg-black rounded-full"
+          style={{ top: 'clamp(14px, 2.2vw, 20px)', width: '32%', height: '3.2%' }}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function AiCompanionCase() {
   const navigate = useNavigate();
@@ -122,7 +162,7 @@ export default function AiCompanionCase() {
         <div className="h-px bg-[#050505]/14 mb-14 md:mb-20" />
 
         {/* Slides, in presentation order */}
-        {images.map((image, i) => (
+        {imagesBeforeTutorials.map((image, i) => (
           <div key={image.src} className={i === 0 ? '' : 'pt-12 md:pt-20'}>
             <figure>
               <img
@@ -131,6 +171,41 @@ export default function AiCompanionCase() {
                 className={imgClass}
                 loading={i === 0 ? 'eager' : 'lazy'}
               />
+            </figure>
+          </div>
+        ))}
+
+        {/* Tutorials — live video mockups, matching the deck slide */}
+        <div className="pt-12 md:pt-20">
+          <div
+            className="rounded-[14px] md:rounded-[18px] px-6 sm:px-10 md:px-14 pt-12 md:pt-16 pb-10 md:pb-12"
+            style={{ background: 'linear-gradient(180deg, #000000 0%, #0D21AA 100%)' }}
+          >
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-6 mb-10 md:mb-14">
+              {tutorials.map(tutorial => (
+                <PhoneMockup key={tutorial.src} src={tutorial.src} label={tutorial.label} />
+              ))}
+            </div>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-10">
+              <h3
+                className="text-white"
+                style={{ fontSize: 'clamp(24px, 2.6vw, 32px)', fontWeight: 500, letterSpacing: '-0.02em' }}
+              >
+                Tutorials
+              </h3>
+              <p className="text-white/70" style={{ fontSize: '15px', lineHeight: 1.6, maxWidth: '460px' }}>
+                Each tutorial offers a refined, step-by-step introduction to the
+                app's features, guiding users through their use in context as
+                they navigate the museum.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {imagesAfterTutorials.map(image => (
+          <div key={image.src} className="pt-12 md:pt-20">
+            <figure>
+              <img src={image.src} alt={image.alt} className={imgClass} loading="lazy" />
             </figure>
           </div>
         ))}
