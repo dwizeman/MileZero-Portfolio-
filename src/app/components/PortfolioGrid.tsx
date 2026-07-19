@@ -22,6 +22,7 @@ interface Project {
 }
 
 const projects: Project[] = [
+  { id: 21, name: 'Access Club',                  label: 'BRAND SYSTEM',           year: '2025', category: 'Microsoft',           to: '/access-club', thumbnail: '/access-club/thumbnail.jpg' },
   { id: 1,  name: 'Multiply',                    label: 'BRAND SYSTEM',           year: '2024', category: 'Scala Group',         url: 'https://embed.figma.com/deck/Z2V3oQOFrBtscMYtF0y8Yi?embed-host=share', isFigma: true, thumbnail: '/thumbnails/multiply.jpg' },
   { id: 19, name: 'Multiply',                    label: 'BRAND SYSTEM',           year: '2024', category: 'Scala Group',         to: '/multiply', thumbnail: '/multiply/thumbnail.mp4' },
   { id: 2,  name: 'Your AI Companion',           label: 'PRODUCT UX / UI',        year: '2024', category: 'Museum of Tolerance', url: 'https://embed.figma.com/deck/Rnhyu8rGPbUjOICdErIwNZ?embed-host=share', isFigma: true, thumbnail: '/thumbnails/ai-companion.jpg' },
