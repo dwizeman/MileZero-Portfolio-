@@ -120,11 +120,15 @@ export default function AccessClubCase() {
         {/* 2. Countdown screen, in-venue */}
         <div className="pt-12 md:pt-20">
           <figure>
-            <img
-              src="/access-club/2.jpg"
-              alt="Access Club — countdown screen projected in venue"
+            <video
+              src="/access-club/2.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              aria-label="Access Club — countdown screen projected in venue"
               className={videoClass}
-              loading="lazy"
             />
           </figure>
         </div>
