@@ -8,6 +8,7 @@ import OutOfScopeCase from "./components/OutOfScopeCase";
 import BluehatCase from "./components/BluehatCase";
 import AbraKadablueCase from "./components/AbraKadablueCase";
 import GlobalSecurityStartupsCase from "./components/GlobalSecurityStartupsCase";
+import MultiplyCase from "./components/MultiplyCase";
 import PasswordProtection from "./components/PasswordProtection";
 
 export const router = createBrowserRouter([
@@ -24,6 +25,7 @@ export const router = createBrowserRouter([
       { path: "bluehat", Component: BluehatCase },
       { path: "abra-kadablue", Component: AbraKadablueCase },
       { path: "global-security-startups", Component: GlobalSecurityStartupsCase },
+      { path: "multiply", Component: MultiplyCase },
     ],
   },
 ]);

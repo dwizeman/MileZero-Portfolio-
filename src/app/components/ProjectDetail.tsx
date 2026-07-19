@@ -18,7 +18,6 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { id: 1,  url: 'https://embed.figma.com/deck/Z2V3oQOFrBtscMYtF0y8Yi?embed-host=share', cropTop: 0,  cropBottom: 0 },
   { id: 2,  url: 'https://embed.figma.com/deck/Rnhyu8rGPbUjOICdErIwNZ?embed-host=share', cropTop: 0,  cropBottom: 0 },
   { id: 3,  url: 'https://www.wizemandaum.com/deepinstinct',     cropTop: 96, cropBottom: 120, cropTopMobile: 0, cropBottomMobile: 180 },
   { id: 4,  url: 'https://www.wizemandaum.com/abra-kadablue',    cropTop: 96, cropBottom: 120, cropTopMobile: 0, cropBottomMobile: 180 },
